@@ -1,2 +1,2 @@
-# arch  profile branch
-amd64   amd64   stable
+# arch  profile         branch
+amd64   amd64/headless  stable
