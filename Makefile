@@ -66,6 +66,7 @@ system:
 	chroot ./rootfs /env.sh emerge --depclean
 
 	chroot ./rootfs /env.sh emerge -qb1 sys-devel/gcc
+	chroot ./rootfs /env.sh emerge -qb1 sys-kernel/linux-stable
 	chroot ./rootfs /env.sh emerge -eqb system --buildpkg-exclude 'virtual/*' --exclude 'sys-devel/gcc'
 	chroot ./rootfs /env.sh emerge -qb @preserved-rebuild --buildpkg-exclude 'virtual/*' --exclude 'sys-devel/gcc'
 
