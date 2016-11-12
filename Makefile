@@ -53,8 +53,10 @@ packages:
 	# build supported packages
 
 	chroot ./rootfs /env.sh emerge -qb1 app-emulation/lxc
+	chroot ./rootfs /env.sh emerge -qb1 dev-python/python2-lxc
 	chroot ./rootfs /env.sh emerge -qb1 app-admin/ansible
 	chroot ./rootfs /env.sh emerge -qb1 app-admin/vault
+
 	cp -r ./rootfs/usr/portage/packages ./deploy/packages
 
 system:
