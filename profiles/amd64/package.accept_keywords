@@ -1,2 +1,6 @@
 # hashicorp vault
 =app-admin/vault-0.6.2 ~amd64
+
+# lxc 2
+=sys-process/criu-2.7 ~amd64
+=app-emulation/lxc-2.0.5 ~amd64
