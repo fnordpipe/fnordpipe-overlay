@@ -26,7 +26,7 @@ chroot:
 
 	cp ./rootfs/usr/share/zoneinfo/Etc/UTC ./rootfs/etc/localtime
 	cp /etc/resolv.conf ./rootfs/etc/resolv.conf
-	curl -sL --insecure http://git.fnordpipe.org/gentoo/scripts.git/plain/chenv.sh > ./rootfs/env.sh
+	curl -sL --insecure http://git.fnordpipe.org/gentoo/scripts.git/plain/chroot/env.sh > ./rootfs/env.sh
 
 	chmod 0644 ./rootfs/etc/resolv.conf
 	chmod 0700 ./rootfs/env.sh
