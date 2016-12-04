@@ -56,6 +56,13 @@ packages:
 	chroot ./rootfs /env.sh emerge -qb1 dev-python/python2-lxc
 	chroot ./rootfs /env.sh emerge -qb1 app-admin/ansible
 	chroot ./rootfs /env.sh emerge -qb1 app-admin/vault
+	chroot ./rootfs /env.sh emerge -qb1 dev-util/buildbot
+	chroot ./rootfs /env.sh emerge -qb1 dev-util/buildbot-slave
+	chroot ./rootfs /env.sh emerge -qb1 net-misc/dhcp
+	chroot ./rootfs /env.sh emerge -qb1 net-dns/bind
+	chroot ./rootfs /env.sh emerge -qb1 dev-db/redis
+	chroot ./rootfs /env.sh emerge -qb1 www-servers/nginx
+
 
 	cp -r ./rootfs/usr/portage/packages ./deploy/packages
 
