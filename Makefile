@@ -35,7 +35,7 @@ chroot:
 	# configure portage
 	echo "MAKEOPTS=\"-j$$(grep -c ^processor /proc/cpuinfo)\"" > ./rootfs/etc/portage/make.conf
 
-	ln -snf /usr/local/fnordpipe-overlay/metadata/repos.conf ./rootfs/etc/portage/repos.conf/fnordpipe-overlay.conf
+	cp /usr/local/fnordpipe-overlay/metadata/repos.conf ./rootfs/etc/portage/repos.conf/fnordpipe.conf
 	ln -snf ../../usr/local/fnordpipe-overlay/profiles/amd64/headless ./rootfs/etc/portage/make.profile
 
 	rm -rf ./rootfs/etc/portage/package.* || :
