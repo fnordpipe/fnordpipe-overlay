@@ -52,6 +52,7 @@ clean:
 packages:
 	# build supported packages
 
+	chroot ./rootfs /env.sh emerge -qb1 net-misc/bridge-utils
 	chroot ./rootfs /env.sh emerge -qb1 app-emulation/lxc
 	chroot ./rootfs /env.sh emerge -qb1 dev-python/python2-lxc
 	chroot ./rootfs /env.sh emerge -qb1 app-admin/ansible
