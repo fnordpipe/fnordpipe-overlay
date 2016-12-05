@@ -34,6 +34,10 @@ chroot:
 
 	# configure portage
 	echo "MAKEOPTS=\"-j$$(grep -c ^processor /proc/cpuinfo)\"" > ./rootfs/etc/portage/make.conf
+	echo "CHOST=\"x86_64-pc-linux-gnu\"" >> ./rootfs/etc/portage/make.conf
+	echo "CFLAGS=\"-O2 -pipe -fomit-frame-pointer\"" >> ./rootfs/etc/portage/make.conf
+	echo "CXXFLAGS=\"$${CFLAGS}\"" >> ./rootfs/etc/portage/make.conf
+	echo "CPU_FLAGS_X86=\"mmx sse sse2 sse3 sse4_1 ssse3\"" >> ./rootfs/etc/portage/make.conf
 
 	cp /usr/local/fnordpipe-overlay/metadata/repos.conf ./rootfs/etc/portage/repos.conf/fnordpipe.conf
 	ln -snf ../../usr/local/fnordpipe-overlay/profiles/amd64/headless ./rootfs/etc/portage/make.profile
