@@ -60,7 +60,9 @@ packages:
 	chroot ./rootfs /env.sh emerge -qb1 net-misc/bridge-utils
 	chroot ./rootfs /env.sh emerge -qb1 net-misc/curl
 	chroot ./rootfs /env.sh emerge -qb1 app-emulation/lxc
+	chroot ./rootfs /env.sh emerge -qb1 app-emulation/lxc-templates
 	chroot ./rootfs /env.sh emerge -qb1 dev-python/python2-lxc
+	chroot ./rootfs /env.sh emerge -qb1 app-emulation/xen-templates
 	chroot ./rootfs /env.sh emerge -qb1 app-admin/ansible
 	chroot ./rootfs /env.sh emerge -qb1 app-admin/vault
 	chroot ./rootfs /env.sh emerge -qb1 dev-util/buildbot
@@ -68,6 +70,7 @@ packages:
 	chroot ./rootfs /env.sh emerge -qb1 net-misc/dhcp
 	chroot ./rootfs /env.sh emerge -qb1 net-dns/bind
 	chroot ./rootfs /env.sh emerge -qb1 dev-db/redis
+	chroot ./rootfs /env.sh emerge -qb1 dev-python/redis-py
 	chroot ./rootfs /env.sh emerge -qb1 www-servers/nginx
 
 
