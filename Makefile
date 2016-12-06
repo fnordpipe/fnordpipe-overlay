@@ -91,15 +91,15 @@ system:
 	chroot ./rootfs /env.sh emerge --depclean
 
 	tar cjpf ./deploy/overlay-stage3-amd64-headless.tar.bz2 -C ./rootfs \
-		--exclude='env.sh' \
-		--exclude='usr/portage' \
-		--exclude='usr/local/fnordpipe-overlay' \
-		--exclude='proc/*' \
-		--exclude='sys/*' \
-		--exclude='dev/*' \
+		--exclude='./env.sh' \
+		--exclude='./usr/portage' \
+		--exclude='./usr/local/fnordpipe-overlay' \
+		--exclude='./proc/*' \
+		--exclude='./sys/*' \
+		--exclude='./dev/*' \
 		.
 
 	tar cjf ./deploy/overlay-portage.tar.bz2 -C ./rootfs/usr/local \
-		--exclude='.git*' \
-		--exclude='Makefile' \
+		--exclude='./.git*' \
+		--exclude='./Makefile' \
 		fnordpipe-overlay
