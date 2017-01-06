@@ -8,3 +8,6 @@
 # e2fsutils
 =sys-libs/e2fsprogs-libs-1.43.3 ~amd64
 =sys-fs/e2fsprogs-1.43.3-r1 ~amd64
+
+# phpldapadmin
+=net-nds/phpldapadmin-1.2.3-r1 ~amd64
