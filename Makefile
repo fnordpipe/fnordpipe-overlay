@@ -40,7 +40,7 @@ chroot:
 	echo "CPU_FLAGS_X86=\"mmx sse sse2 sse3 sse4_1 ssse3\"" >> ./rootfs/etc/portage/make.conf
 	echo "EMERGE_DEFAULT_OPTS=\"--buildpkg-exclude 'virtual/*'\"" >> ./rootfs/etc/portage/make.conf
 
-	cp /usr/local/fnordpipe-overlay/metadata/repos.conf ./rootfs/etc/portage/repos.conf/fnordpipe.conf
+	cp ./rootfs/usr/local/fnordpipe-overlay/metadata/repos.conf ./rootfs/etc/portage/repos.conf/fnordpipe.conf
 	ln -snf ../../usr/local/fnordpipe-overlay/profiles/amd64/headless ./rootfs/etc/portage/make.profile
 
 	rm -rf ./rootfs/etc/portage/package.* || :
@@ -72,7 +72,6 @@ packages:
 	chroot ./rootfs /env.sh emerge -qb1 dev-db/redis
 	chroot ./rootfs /env.sh emerge -qb1 dev-python/redis-py
 	chroot ./rootfs /env.sh emerge -qb1 www-servers/nginx
-
 
 	cp -r ./rootfs/usr/portage/packages ./deploy/packages
 
