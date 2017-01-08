@@ -74,6 +74,7 @@ packages:
 	chroot ./rootfs /env.sh emerge -qb1 dev-db/redis
 	chroot ./rootfs /env.sh emerge -qb1 dev-python/redis-py
 	chroot ./rootfs /env.sh emerge -qb1 www-servers/nginx
+	chroot ./rootfs /env.sh emerge -qb1 net-nds/phpldapadmin
 
 	cp -r ./rootfs/usr/portage/packages ./deploy/packages
 
