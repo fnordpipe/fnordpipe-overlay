@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE=""
 
-EGIT_REPO_URI="http://git.fnordpipe.org/gentoo/scripts.git"
+EGIT_REPO_URI="http://git.fnordpipe.org/generic/scripts.git"
 
 inherit git-r3
 
