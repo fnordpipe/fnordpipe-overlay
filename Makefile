@@ -1,7 +1,6 @@
 GENTOOMIRROR?=http://distfiles.gentoo.org
 CHENVURL?=https://github.com/fnordpipe/scripts/raw/master/chroot/env.sh
 
-
 chroot:
 	# prepare chroot
 
@@ -76,6 +75,8 @@ packages:
 	chroot ./rootfs /env.sh emerge -qb1 dev-python/redis-py
 	chroot ./rootfs /env.sh emerge -qb1 www-servers/nginx
 	chroot ./rootfs /env.sh emerge -qb1 net-nds/phpldapadmin
+	chroot ./rootfs /env.sh emerge -qb1 dev-db/mariadb
+	chroot ./rootfs /env.sh emerge -qb1 dev-db/postgresql
 
 	cp -r ./rootfs/usr/portage/packages ./deploy/packages
 
