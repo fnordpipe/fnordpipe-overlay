@@ -71,6 +71,7 @@ packages:
 	chroot ./rootfs /env.sh emerge -qb1 net-misc/dhcp
 	chroot ./rootfs /env.sh emerge -qb1 net-dns/bind
 	chroot ./rootfs /env.sh emerge -qb1 net-nds/openldap
+	chroot ./rootfs /env.sh emerge -qb1 net-misc/rabbitmq-server
 	chroot ./rootfs /env.sh emerge -qb1 dev-db/redis
 	chroot ./rootfs /env.sh emerge -qb1 dev-python/redis-py
 	chroot ./rootfs /env.sh emerge -qb1 www-servers/nginx
