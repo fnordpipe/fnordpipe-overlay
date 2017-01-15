@@ -81,6 +81,7 @@ packages:
 	chroot ./rootfs /env.sh emerge -qb1 dev-python/mysql-python
 	chroot ./rootfs /env.sh emerge -qb1 dev-db/mariadb
 	chroot ./rootfs /env.sh emerge -qb1 dev-db/postgresql
+	chroot ./rootfs /env.sh emerge -qb1 dev-python/psycopg
 
 	cp -r ./rootfs/usr/portage/packages ./deploy/packages
 
