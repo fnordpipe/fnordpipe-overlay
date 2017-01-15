@@ -39,3 +39,11 @@ src_prepare() {
   epatch "${FILESDIR}/0001-fix-missing-headers.patch"
   eapply_user
 }
+
+src_install() {
+  golang-build_src_install
+
+  exeinto /usr/libexec/${PN}
+  doexe "${S}"/bin/*
+  fowners ${SVCNAME}:${SVCNAME} -R /usr/libexec/${PN}
+}
