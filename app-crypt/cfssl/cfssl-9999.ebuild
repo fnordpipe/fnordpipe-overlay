@@ -17,7 +17,10 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE=""
 
-DEPEND=">=dev-lang/go-1.6"
+DEPEND="
+  >=dev-lang/go-1.6
+  dev-vcs/git
+"
 RDEPEND="
   ${DEPEND}
   dev-go/ratelimit
