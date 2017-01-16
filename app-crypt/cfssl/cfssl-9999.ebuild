@@ -4,7 +4,7 @@
 
 EAPI=6
 
-inherit golang-vcs golang-build user
+inherit golang-vcs-vendor golang-build user
 
 DESCRIPTION="CFSSL: Cloudflare's PKI and TLS toolkit"
 HOMEPAGE="https://cfssl.org/"
@@ -31,11 +31,6 @@ SVCNAME="cfssl"
 pkg_setup() {
   enewgroup ${SVCNAME}
   enewuser ${SVCNAME} -1 -1 /dev/null ${SVCNAME}
-}
-
-src_unpack() {
-  export GO15VENDOREXPERIMENT=1
-  golang-vcs_src_unpack
 }
 
 src_prepare() {
