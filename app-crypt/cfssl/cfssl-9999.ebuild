@@ -44,4 +44,13 @@ src_install() {
   exeinto /usr/libexec/${PN}
   doexe "${S}"/bin/*
   fowners ${SVCNAME}:${SVCNAME} -R /usr/libexec/${PN}
+
+  dodir /etc/${PN}
+  dodir /etc/${PN}/csr
+  dodir /var/lib/${PN}
+
+  fowners ${SVCNAME}:${SVCNAME} -R /etc/${PN}
+  fowners ${SVCNAME}:${SVCNAME} /var/lib/${PN}
+
+  rm -rf ${D}/usr/lib/go-gentoo
 }
