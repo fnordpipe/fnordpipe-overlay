@@ -41,9 +41,8 @@ src_prepare() {
 src_install() {
   golang-build_src_install
 
-  exeinto /usr/libexec/${PN}
+  exeinto /usr/bin
   doexe "${S}"/bin/*
-  fowners ${SVCNAME}:${SVCNAME} -R /usr/libexec/${PN}
 
   dodir /etc/${PN}
   dodir /etc/${PN}/csr
