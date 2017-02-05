@@ -9,7 +9,7 @@ depend() {
 }
 
 start() {
-  start-stop-daemon --start --make-pidfile --pidfile /run/cfssl.pid --chdir /var/lib/cfssl --background --quiet --user cfssl:cfssl --exec cfssl -- serve -ca-key subca-key.pem -ca subca.pem -config /etc/cfssl/config.json
+  start-stop-daemon --start --make-pidfile --pidfile /run/cfssl.pid --chdir /var/lib/cfssl --background --quiet --user cfssl:cfssl --exec cfssl -- serve -ca-key rootca-key.pem -ca rootca.pem -config /etc/cfssl/config.json
   eend $?
 }
 
