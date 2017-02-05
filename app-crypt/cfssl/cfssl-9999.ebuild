@@ -41,6 +41,8 @@ src_prepare() {
 src_install() {
   golang-build_src_install
 
+  newinitd ${FILESDIR}/init.sh ${SVCNAME}
+
   exeinto /usr/bin
   doexe "${S}"/bin/*
 
