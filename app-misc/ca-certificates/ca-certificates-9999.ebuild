@@ -30,4 +30,7 @@ src_install() {
   dodir /etc/ssl
   insinto /etc/ssl
   newins ${S}/cert.pem cert.pem
+
+  # link cert for compatibility with applications written in golang
+  dosym /etc/ssl/cert.pem /etc/ssl/certs/ca-certificates.crt
 }
