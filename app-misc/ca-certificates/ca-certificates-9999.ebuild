@@ -24,8 +24,9 @@ src_install() {
   dodir /usr/share/ca-certificates/fnordpipe
   insinto /usr/share/ca-certificates/fnordpipe
   newins ${S}/pem/fnordpipe-infrastructure.pem fnordpipe-infrastructure.pem
+  newins ${S}/pem/digicert-highassurance.pem digicert-highassurance.pem
 
-  cat ${S}/pem/fnordpipe-infrastructure.pem > ${S}/cert.pem
+  cat ${S}/pem/*.pem > ${S}/cert.pem
 
   dodir /etc/ssl
   insinto /etc/ssl
