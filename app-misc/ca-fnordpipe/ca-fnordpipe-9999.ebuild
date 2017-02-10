@@ -27,6 +27,8 @@ src_install() {
   dodir /usr/local/share/ca-certificates
   insinto /usr/local/share/ca-certificates
   newins ${S}/pem/fnordpipe-infrastructure.pem fnordpipe-infrastructure.crt
+}
 
+pkg_postinst() {
   update-ca-certificates
 }
