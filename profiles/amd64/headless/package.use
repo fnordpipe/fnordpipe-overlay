@@ -6,3 +6,6 @@
 net-analyzer/icinga2 postgres
 www-apps/icingaweb2 ldap nginx postgres
 >=media-gfx/imagemagick-6.9.7.4 -openmp
+
+# dovecot
+net-mail/dovecot managesieve sieve
