@@ -12,3 +12,8 @@ mail-mta/postfix dovecot-sasl ldap
 
 # dovecot
 net-mail/dovecot managesieve sieve
+
+# sogo
+gnustep-libs/sope postgres ldap
+>=sys-devel/llvm-3.7.1-r3 clang
+>=x11-libs/cairo-1.14.6 X

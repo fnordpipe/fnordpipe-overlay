@@ -88,6 +88,7 @@ packages:
 	chroot ./rootfs /env.sh emerge -qb1 www-apps/icingaweb2
 	chroot ./rootfs /env.sh emerge -qb1 mail-mta/postfix
 	chroot ./rootfs /env.sh emerge -qb1 net-mail/dovecot
+	chroot ./rootfs /env.sh emerge -qb1 gnustep-apps/sogo
 
 	cp -r ./rootfs/usr/portage/packages ./deploy/packages
 
