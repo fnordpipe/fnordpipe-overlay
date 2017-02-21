@@ -86,6 +86,8 @@ packages:
 	chroot ./rootfs /env.sh emerge -qb1 dev-python/psycopg
 	chroot ./rootfs /env.sh emerge -qb1 net-analyzer/icinga2
 	chroot ./rootfs /env.sh emerge -qb1 www-apps/icingaweb2
+	chroot ./rootfs /env.sh emerge -qb1 mail-mta/postfix
+	chroot ./rootfs /env.sh emerge -qb1 net-mail/dovecot
 
 	cp -r ./rootfs/usr/portage/packages ./deploy/packages
 
