@@ -1,2 +1,5 @@
+# gcc
+sys-devel/gcc objc
+
 # bind
 net-dns/bind dlz
