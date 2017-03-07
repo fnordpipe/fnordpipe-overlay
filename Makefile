@@ -89,6 +89,7 @@ packages:
 	chroot ./rootfs /env.sh emerge -qb1 mail-mta/postfix
 	chroot ./rootfs /env.sh emerge -qb1 net-mail/dovecot
 	chroot ./rootfs /env.sh emerge -qb1 gnustep-apps/sogo
+	chroot ./rootfs /env.sh emerge -qb1 dev-lua/luaossl
 
 	cp -r ./rootfs/usr/portage/packages ./deploy/packages
 
