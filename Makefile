@@ -75,8 +75,7 @@ packages:
 	chroot ./rootfs /env.sh emerge -qb1 dev-db/redis
 	chroot ./rootfs /env.sh emerge -qb1 dev-python/redis-py
 	chroot ./rootfs /env.sh emerge -qb1 www-servers/nginx
-	chroot ./rootfs /env.sh emerge -qb1 dev-lang/go
-	chroot ./rootfs /env.sh emerge -qb1 app-crypt/cfssl
+	chroot ./rootfs /env.sh emerge -qb1 app-crypt/laprassl
 	chroot ./rootfs /env.sh emerge -qb1 net-nds/phpldapadmin
 	chroot ./rootfs /env.sh emerge -qb1 dev-db/phpmyadmin
 	chroot ./rootfs /env.sh emerge -qb1 dev-db/phppgadmin
