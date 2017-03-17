@@ -23,6 +23,8 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_install() {
+  dodir /etc/laprassl
+  dodir /var/lib/laprassl
   dodir /usr/share/webapps/${PN}/${PV}
   insinto /usr/share/webapps/${PN}/${PV}
 
