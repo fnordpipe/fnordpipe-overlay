@@ -9,6 +9,7 @@ DESCRIPTION="Most comprehensive OpenSSL module in the Lua universe."
 HOMEPAGE="https://www.fnordpipe.org"
 SRC_URI=""
 
+EGIT_BRANCH="keyidentifier"
 EGIT_REPO_URI="http://git.fnordpipe.org/ssl/luaossl.git"
 
 LICENSE="MIT"
