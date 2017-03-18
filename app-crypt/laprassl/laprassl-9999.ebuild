@@ -17,9 +17,7 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE=""
 
-DEPEND="
-  dev-lua/luarocks
-"
+DEPEND=""
 RDEPEND="${DEPEND}"
 
 src_install() {
@@ -29,9 +27,4 @@ src_install() {
   insinto /usr/share/webapps/${PN}/${PV}
 
   doins -r ${S}/src/*
-}
-
-pkg_preinst() {
-  # hacky: fix after writing all the shitty ebuilds of dependency chain.
-  luarocks install lapis
 }
