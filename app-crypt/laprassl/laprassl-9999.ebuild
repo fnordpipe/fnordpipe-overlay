@@ -21,6 +21,7 @@ DEPEND=""
 RDEPEND="
   ${DEPEND}
   dev-lang/lua
+  www-servers/nginx[nginx_modules_http_lua]
 "
 
 src_install() {
@@ -30,4 +31,6 @@ src_install() {
   insinto /usr/share/webapps/${PN}/${PV}
 
   doins -r ${S}/src/*
+
+  fowners nginx:nginx /usr/share/webapps/${PN}/${PV}/data
 }
