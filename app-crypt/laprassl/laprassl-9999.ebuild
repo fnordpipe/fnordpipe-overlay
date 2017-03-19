@@ -18,7 +18,10 @@ KEYWORDS="amd64"
 IUSE=""
 
 DEPEND=""
-RDEPEND="${DEPEND}"
+RDEPEND="
+  ${DEPEND}
+  dev-lang/lua
+"
 
 src_install() {
   dodir /etc/laprassl
