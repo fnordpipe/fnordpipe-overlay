@@ -27,6 +27,8 @@ src_install() {
   dodir /usr/local/share/ca-certificates
   insinto /usr/local/share/ca-certificates
   newins ${S}/pem/fnordpipe-infrastructure.pem fnordpipe-infrastructure.crt
+  newins ${S}/pem/fnordpipe-infrastructure-root-ca.crt.pem fnordpipe-infrastructure-root-ca.crt
+  newins ${S}/pem/fnordpipe-infrastructure-machine-ca.crt.pem fnordpipe-infrastructure-machine-ca.crt
 }
 
 pkg_postinst() {
