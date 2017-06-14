@@ -7,14 +7,14 @@ chroot:
 	$(eval GENTOOSTAGE3 := $(shell curl -sL ${GENTOOMIRROR}/releases/amd64/autobuilds/latest-stage3-amd64-hardened.txt | tail -n 1 | awk '{ print $$1 }'))
 
 	# prepare chroot rootfs
-	mkdir -p ./rootfs ./deploy
+	install -d ./rootfs ./deploy
 	curl -sL ${GENTOOMIRROR}/releases/amd64/autobuilds/${GENTOOSTAGE3} | \
 		tee ./deploy/gentoo-stage3-amd64-hardened.tar.bz2 | \
 		tar xjpf - -C ./rootfs --exclude='dev/*'
 	curl -sL ${GENTOOMIRROR}/snapshots/portage-latest.tar.bz2 | \
 		tee ./deploy/gentoo-portage.tar.bz2 | \
 		tar xjpf - -C ./rootfs/usr
-	mkdir ./rootfs/etc/portage/repos.conf
+	install -d ./rootfs/etc/portage/repos.conf
 
 	# mount pseudofs
 	mount -t proc none ./rootfs/proc
