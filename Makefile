@@ -95,12 +95,12 @@ packages:
 system:
 	# build system
 
-	chroot ./rootfs /env.sh emerge -q1 app-editors/vim
-	chroot ./rootfs /env.sh eselect editor set /usr/bin/vim
-	chroot ./rootfs /env.sh emerge -q1 virtual/editor
+	#chroot ./rootfs /env.sh emerge -q1 app-editors/vim
+	#chroot ./rootfs /env.sh eselect editor set /usr/bin/vim
+	#chroot ./rootfs /env.sh emerge -q1 virtual/editor
 
 	#chroot ./rootfs /env.sh emerge -uNDq system
-	chroot ./rootfs /env.sh emerge --depclean
+	#chroot ./rootfs /env.sh emerge --depclean
 
 	#chroot ./rootfs /env.sh emerge -qb1 sys-devel/gcc
 	#chroot ./rootfs /env.sh emerge -qb1 sys-kernel/linux-stable
