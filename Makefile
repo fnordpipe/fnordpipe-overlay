@@ -59,36 +59,36 @@ packages:
 	# build supported packages
 
 	chroot ./rootfs /env.sh emerge -qb1 net-misc/bridge-utils
-	chroot ./rootfs /env.sh emerge -qb1 net-misc/curl
-	chroot ./rootfs /env.sh emerge -qb1 app-emulation/lxc
-	chroot ./rootfs /env.sh emerge -qb1 app-emulation/lxc-templates
-	chroot ./rootfs /env.sh emerge -qb1 dev-python/python2-lxc
-	chroot ./rootfs /env.sh emerge -qb1 app-emulation/xen-templates
-	chroot ./rootfs /env.sh emerge -qb1 app-admin/ansible
-	chroot ./rootfs /env.sh emerge -qb1 app-admin/vault
-	chroot ./rootfs /env.sh emerge -qb1 dev-util/buildbot
-	chroot ./rootfs /env.sh emerge -qb1 dev-util/buildbot-slave
-	chroot ./rootfs /env.sh emerge -qb1 net-misc/dhcp
-	chroot ./rootfs /env.sh emerge -qb1 net-dns/bind
-	chroot ./rootfs /env.sh emerge -qb1 net-nds/openldap
-	chroot ./rootfs /env.sh emerge -qb1 net-misc/rabbitmq-server
-	chroot ./rootfs /env.sh emerge -qb1 dev-db/redis
-	chroot ./rootfs /env.sh emerge -qb1 dev-python/redis-py
-	chroot ./rootfs /env.sh emerge -qb1 www-servers/nginx
-	chroot ./rootfs /env.sh emerge -qb1 app-crypt/laprassl
-	chroot ./rootfs /env.sh emerge -qb1 net-nds/phpldapadmin
-	chroot ./rootfs /env.sh emerge -qb1 dev-db/phpmyadmin
-	chroot ./rootfs /env.sh emerge -qb1 dev-db/phppgadmin
-	chroot ./rootfs /env.sh emerge -qb1 dev-python/mysql-python
-	chroot ./rootfs /env.sh emerge -qb1 dev-db/mariadb
-	chroot ./rootfs /env.sh emerge -qb1 dev-db/postgresql
-	chroot ./rootfs /env.sh emerge -qb1 dev-python/psycopg
-	chroot ./rootfs /env.sh emerge -qb1 net-analyzer/icinga2
-	chroot ./rootfs /env.sh emerge -qb1 www-apps/icingaweb2
-	chroot ./rootfs /env.sh emerge -qb1 mail-mta/postfix
-	chroot ./rootfs /env.sh emerge -qb1 net-mail/dovecot
-	chroot ./rootfs /env.sh emerge -qb1 gnustep-apps/sogo
-	chroot ./rootfs /env.sh emerge -qb1 dev-lua/luaossl
+	#chroot ./rootfs /env.sh emerge -qb1 net-misc/curl
+	#chroot ./rootfs /env.sh emerge -qb1 app-emulation/lxc
+	#chroot ./rootfs /env.sh emerge -qb1 app-emulation/lxc-templates
+	#chroot ./rootfs /env.sh emerge -qb1 dev-python/python2-lxc
+	#chroot ./rootfs /env.sh emerge -qb1 app-emulation/xen-templates
+	#chroot ./rootfs /env.sh emerge -qb1 app-admin/ansible
+	#chroot ./rootfs /env.sh emerge -qb1 app-admin/vault
+	#chroot ./rootfs /env.sh emerge -qb1 dev-util/buildbot
+	#chroot ./rootfs /env.sh emerge -qb1 dev-util/buildbot-slave
+	#chroot ./rootfs /env.sh emerge -qb1 net-misc/dhcp
+	#chroot ./rootfs /env.sh emerge -qb1 net-dns/bind
+	#chroot ./rootfs /env.sh emerge -qb1 net-nds/openldap
+	#chroot ./rootfs /env.sh emerge -qb1 net-misc/rabbitmq-server
+	#chroot ./rootfs /env.sh emerge -qb1 dev-db/redis
+	#chroot ./rootfs /env.sh emerge -qb1 dev-python/redis-py
+	#chroot ./rootfs /env.sh emerge -qb1 www-servers/nginx
+	#chroot ./rootfs /env.sh emerge -qb1 app-crypt/laprassl
+	#chroot ./rootfs /env.sh emerge -qb1 net-nds/phpldapadmin
+	#chroot ./rootfs /env.sh emerge -qb1 dev-db/phpmyadmin
+	#chroot ./rootfs /env.sh emerge -qb1 dev-db/phppgadmin
+	#chroot ./rootfs /env.sh emerge -qb1 dev-python/mysql-python
+	#chroot ./rootfs /env.sh emerge -qb1 dev-db/mariadb
+	#chroot ./rootfs /env.sh emerge -qb1 dev-db/postgresql
+	#chroot ./rootfs /env.sh emerge -qb1 dev-python/psycopg
+	#chroot ./rootfs /env.sh emerge -qb1 net-analyzer/icinga2
+	#chroot ./rootfs /env.sh emerge -qb1 www-apps/icingaweb2
+	#chroot ./rootfs /env.sh emerge -qb1 mail-mta/postfix
+	#chroot ./rootfs /env.sh emerge -qb1 net-mail/dovecot
+	#chroot ./rootfs /env.sh emerge -qb1 gnustep-apps/sogo
+	#chroot ./rootfs /env.sh emerge -qb1 dev-lua/luaossl
 
 	cp -r ./rootfs/usr/portage/packages ./deploy/packages
 
@@ -102,12 +102,12 @@ system:
 	chroot ./rootfs /env.sh emerge -uNDq system
 	chroot ./rootfs /env.sh emerge --depclean
 
-	chroot ./rootfs /env.sh emerge -qb1 sys-devel/gcc
-	chroot ./rootfs /env.sh emerge -qb1 sys-kernel/linux-stable
-	chroot ./rootfs /env.sh emerge -eqb system --exclude 'sys-devel/gcc sys-kernel/linux-stable'
-	chroot ./rootfs /env.sh emerge -qb @preserved-rebuild
+	#chroot ./rootfs /env.sh emerge -qb1 sys-devel/gcc
+	#chroot ./rootfs /env.sh emerge -qb1 sys-kernel/linux-stable
+	#chroot ./rootfs /env.sh emerge -eqb system --exclude 'sys-devel/gcc sys-kernel/linux-stable'
+	#chroot ./rootfs /env.sh emerge -qb @preserved-rebuild
 
-	chroot ./rootfs /env.sh emerge --depclean
+	#chroot ./rootfs /env.sh emerge --depclean
 
 	tar cjpf ./deploy/overlay-stage3-amd64-headless.tar.bz2 -C ./rootfs \
 		--exclude='./env.sh' \
