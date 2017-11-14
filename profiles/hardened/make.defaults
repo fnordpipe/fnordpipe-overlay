@@ -1,0 +1,26 @@
+## system
+BOOTSTRAP_USE="
+  ${BOOTSTRAP_USE}
+  hardened
+  pic
+  xtpax
+  -jit
+  -orc
+  "
+
+USE="
+  ${USE}
+  hardened
+  justify
+  pic
+  urandom
+  xtpax
+  -fortran
+  -jit
+  -orc
+  -pic
+  "
+
+L10N="en"
+
+PROFILE_IS_HARDENED=1

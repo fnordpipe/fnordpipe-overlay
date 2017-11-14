@@ -1,8 +1,0 @@
-# gcc
-sys-devel/gcc objc
-
-# bind
-net-dns/bind dlz
-
-# nginx
-www-servers/nginx nginx_modules_http_lua

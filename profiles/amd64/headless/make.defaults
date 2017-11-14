@@ -1,5 +1,0 @@
-# profile
-INPUT_DEVICES=""
-VIDEO_CARDS=""
-
-PORTAGE_BINHOST="http://distfiles.fnordpipe.org/fnordpipe/releases/amd64/autobuilds/latest/headless/packages"

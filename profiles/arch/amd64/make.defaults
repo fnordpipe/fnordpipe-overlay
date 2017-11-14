@@ -6,8 +6,3 @@ CXXFLAGS="${CFLAGS}"
 CPU_FLAGS_X86="mmx sse sse2 sse3 sse4_1 ssse3"
 
 LDFLAGS="-Wl,-O1 -Wl,--as-needed"
-
-## system
-USE="dbus python sqlite vim-syntax"
-
-L10N="en"
