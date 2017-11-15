@@ -22,3 +22,7 @@
 *sys-apps/busybox
 *sys-apps/net-tools
 *sys-apps/util-linux
+*sys-apps/findutils
+*sys-apps/grep
+*sys-apps/kbd
+*sys-process/procps

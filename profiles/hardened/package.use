@@ -1,2 +1,5 @@
 # openssl
 dev-libs/openssl -sslv3
+
+# enable gzipped module loading
+sys-apps/kmod zlib
