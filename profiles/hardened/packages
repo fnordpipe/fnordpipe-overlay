@@ -26,3 +26,4 @@
 *sys-apps/grep
 *sys-apps/kbd
 *sys-process/procps
+*sys-libs/pam
