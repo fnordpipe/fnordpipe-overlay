@@ -1,15 +1,18 @@
-![gentoo](https://gentoo.org/assets/img/badges/gentoo-badge2.png "gentoo")
+# Moved to GitLab
 
-# about
+Due to the recent circumstances where GitHub has been acquired by Microsoft, 
+I have decided to leave this place. There can't be any better time to move 
+to an open-source project (at least one where most parts are) rather than 
+staying and by that supporting Microsoft to build up yet another monopoly 
+based on a closed-source software.
 
-fnordpipe-overlay is an overlay for gentoo's build system (portage).
-it extends gentoo with additional packages and profiles.
+**This repository is now hosted on [GitLab](https://gitlab.com/fnordpipe)**
 
-# documentation
+We already live in a world almost exclusively controlled by closed software.
+I hope as many people as possible will follow, in order to build up a 
+new open-source standard of git hosting. I believe that all developers 
+(especially open-source developers) should understand this point of view.
 
-* [gentoo devmanual](https://devmanual.gentoo.org)
-  * [ebuild writing](https://devmanual.gentoo.org/ebuild-writing/index.html)
-  * [variables](https://devmanual.gentoo.org/ebuild-writing/variables/index.html)
-  * [install functions](https://devmanual.gentoo.org/function-reference/install-functions/index.html)
-* `man 5 ebuild`
-* `man portage`
+I highly appreciate anyone who takes the opportunity and does the same.
+
+See you on GitLab

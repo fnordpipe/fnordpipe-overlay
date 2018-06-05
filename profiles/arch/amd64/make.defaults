@@ -1,8 +1,0 @@
-# machine
-CHOST="x86_64-pc-linux-gnu"
-
-CFLAGS="-O2 -pipe -fomit-frame-pointer"
-CXXFLAGS="${CFLAGS}"
-CPU_FLAGS_X86="mmx sse sse2 sse3 sse4_1 ssse3"
-
-LDFLAGS="-Wl,-O1 -Wl,--as-needed"
